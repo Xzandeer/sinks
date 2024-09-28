@@ -1,35 +1,131 @@
-/* Outdated CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-size: 66px;
+    background-color: #000000;
+    color: rgb(63, 63, 63);
 }
 
-h1 {
-    margin: 0;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0e0e0e;
+    padding: 20px;
 }
 
-ul {
+.logo h1 {
     margin: 0;
-    padding: 0;
+    font-size: 35px;
+    font-family: monospace;
+    color: rgb(88, 88, 88);
 }
 
-li {
-    margin: 0;
-    padding: 0;
+nav {
+    display: flex;
+    justify-content: center;
 }
 
-p {
-    margin: 0;
-    padding: 0;
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: sans-serif;
+    transition: color 0.3s ease;
 }
 
-img {
+nav a:hover {
+    color: rgb(82, 81, 81);
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.image-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.image-container img {
     width: 100%;
-    height: auto;
+    height: 745px;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 5px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.329);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: oblique;
+    display: none;
+}
+
+.image-container:hover .hover-text {
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+    font-style: oblique;
+    font-size: 35px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-container.active .overlay {
+    display: flex;
+}
+
+.image-container.active .hover-text {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-top: 20px;
+    font-size: 20px;
 }

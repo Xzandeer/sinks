@@ -3,56 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinks R Us - Old School Website</title>
+    <title>Sinks R Us - Updated Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <table width="100%" cellspacing="0" cellpadding="0" border="0">
-        <tr>
-            <td colspan="2" style="background-color: #cccccc; text-align: center; padding: 10px;">
-                <h1>Sinks R Us</h1>
-                <p>Your one-stop shop for all types of sinks</p>
-            </td>
-        </tr>
-        <tr>
-            <td width="20%" style="background-color: #333333; color: white; padding: 10px; vertical-align: top;">
-                <ul style="list-style-type: none; padding: 0;">
-                    <li><a href="#" style="color: white; text-decoration: none;">Home</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">About Us</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">Types of Sinks</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">Features</a></li>
-                    <li><a href="#" style="color: white; text-decoration: none;">Contact Us</a></li>
-                </ul>
-            </td>
-            <td style="padding: 10px;">
-                <table width="100%" cellspacing="10" cellpadding="10" border="1">
-                    <tr>
-                        <td style="padding: 10px;">
-                            <img src="images/sink1.jpg" alt="Sink Image" width="100%" height="auto">
-                            <h2>About Our Sinks</h2>
-                            <p>At Sinks R Us, we offer a wide variety of sinks to suit every need. From classic designs to modern styles, our sinks are made from high-quality materials and built to last.</p>
-                        </td>
-                        <td style="padding: 10px;">
-                            <img src="images/sink2.jpg" alt="Sink Image" width="100%" height="auto">
-                            <h2>Types of Sinks</h2>
-                            <p>Explore our extensive range of sinks, including undermount, farmhouse, and vessel sinks. Each type comes with its own unique features and benefits to match your kitchen or bathroom design.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px;" colspan="2">
-                            <img src="images/sink3.jpeg" alt="Sink Features" width="100%" height="auto">
-                            <h2>Features and Benefits</h2>
-                            <p>Our sinks come with a range of features, including easy-to-clean surfaces, scratch resistance, and various styles to complement your decor. Learn more about what makes our sinks stand out.</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2" style="background-color: #cccccc; text-align: center; padding: 10px;">
-                <p>&copy; 2024 Sinks R Us</p>
-            </td>
-        </tr>
-    </table>
+    <header>
+        <div class="logo">
+            <h1>Sinks R Us</h1>
+        </div>
+        <nav>
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">About Us</a>
+            <a href="#" class="nav-link">Types of Sinks</a>
+            <a href="#" class="nav-link">Features</a>
+            <a href="#" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <div class="image-grid">
+        <div class="image-container" onclick="toggleOverlay('overlay1')">
+            <img src="images/sink1.jpg" alt="Sink Image">
+            <div class="hover-text">About Our Sinks</div>
+            <div class="overlay" id="overlay1">
+                <h2>About Our Sinks</h2>
+                <p>At Sinks R Us, we offer a wide variety of sinks to suit every need. From classic designs to modern styles, our sinks are made from high-quality materials and built to last.</p>
+            </div>
+        </div>
+        <div class="image-container" onclick="toggleOverlay('overlay2')">
+            <img src="images/sink2.jpg" alt="Sink Image">
+            <div class="hover-text">Types of Sinks</div>
+            <div class="overlay" id="overlay2">
+                <h2>Types of Sinks</h2>
+                <p>Explore our extensive range of sinks, including undermount, farmhouse, and vessel sinks. Each type comes with its own unique features and benefits to match your kitchen or bathroom design.</p>
+            </div>
+        </div>
+        <div class="image-container" onclick="toggleOverlay('overlay3')">
+            <img src="images/sink3.jpg" alt="Sink Features">
+            <div class="hover-text">Features and Benefits</div>
+            <div class="overlay" id="overlay3">
+                <h2>Features and Benefits</h2>
+                <p>Our sinks come with a range of features, including easy-to-clean surfaces, scratch resistance, and various styles to complement your decor. Learn more about what makes our sinks stand out.</p>
+            </div>
+        </div>
+        <div class="image-container" onclick="toggleOverlay('overlay4')">
+            <img src="images/sink4.jpg" alt="Sink Image">
+            <div class="hover-text">New Sink Collection</div>
+            <div class="overlay" id="overlay4">
+                <h2>New Sink Collection</h2>
+                <p>Discover our latest sink designs that blend style and functionality.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sinks R Us</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
